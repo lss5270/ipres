@@ -4,7 +4,11 @@ import Router from 'vue-router'
 import Test from '@/views/test'
 import Search from '@/views/search'
 import PersonInfo from '@/views/personInfo'
-import Login from '@/views/login'
+// import Login from '@/views/login'
+//vue 组件按需引用，vue-router懒加载，vue打包优化。
+const Login = resolve => require(['@/views/login'], resolve) 
+
+
 import TradeMark from '@/views/trademark'
 import Patent from '@/views/patent'
 import TrademarkCollect from '@/views/trademarkCollect'
